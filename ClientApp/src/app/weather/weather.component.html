@@ -1,0 +1,17 @@
+
+<p-panel>
+    <p-header>Five Day Forecast</p-header>
+    <div style="display:flex; justify-content: space-between; align-content: space-around;">
+        <p-card *ngFor="let weather of weatherForecast">
+            <p-header>Today's Weather</p-header>
+            {{weather.temperatureC}}&deg;C
+            <br/>
+            {{weather.summary}}
+            <br/>
+            {{weather.dateFormatted}}
+            <hr/>
+            <p-footer>Sample Weather by Random</p-footer>
+        </p-card>
+    </div>
+    <p-footer>Forecast current as of {{now}}</p-footer>
+</p-panel>
